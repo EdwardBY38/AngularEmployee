@@ -6,21 +6,26 @@ Menu:
 
 Login Username and Password. Use value "UserName" in Username and "P@ssw0rd123" in Password. To continue to dashboard.
 
+
 => Dashboard
 
 Dashboard application. All hardcode template from creative-tim.
+
 
 => Employee Paging
 
 Search engine for employee data by searching email and username data. View of the table content of list Employee data. There are button to add new employee data. There are button to delete row data. There are button to edit employee data (view detail).
 
+
 => Employee Add Form
 
 Popup view form to add new row employee data.
 
+
 => Employee View Detail
 
 Popup view detail Employee detail data.
+
 
 ## Table of Contents
 
