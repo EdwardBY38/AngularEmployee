@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-body">
+        <mat-card-title>Detail Data Employee</mat-card-title>
+        <br>
+        <br>
+        <div class="px-3">
+            <div class="row">
+                <label class="col-md-2">Username</label>
+                <label class="col-md-6">{{data.username}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">First Name</label>
+                <label class="col-md-6">{{data.firstName}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Last Name</label>
+                <label class="col-md-6">{{data.lastName}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Email</label>
+                <label class="col-md-6">{{data.email}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Birth Date</label>
+                <label class="col-md-6">{{data.birthDate | date:'dd-MMM-yyyy'}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Basic Salary</label>
+                <label class="col-md-6">Rp. {{data.basicSalary | number:"0.2"}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Status</label>
+                <label class="col-md-6">{{data.status}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Group</label>
+                <label class="col-md-6">{{data.group}}</label>
+            </div>
+            <div class="row">
+                <label class="col-md-2">Description</label>
+                <label class="col-md-6">{{data.description | date:'dd-MMM-yyyy'}}</label>
+            </div>
+        </div>
+        <div class="right" align="right">
+          <button type="button" class="btn btn-raised btn-warning mr-1" (click)="Cancel()">
+            <mat-icon fontSet="material-icons-round"
+            style="font-size: medium; height: 18px; width: 18px;">
+            cancel</mat-icon>
+            &nbsp;<span translate>Close</span> </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+
+<div class="card">
+    <div class="card-body">
+        <mat-card-title>Add New Employee</mat-card-title>
+        <br>
+        <br>
+        <div class="px-3">
+            <div class="form-body" id="UcForm">
+                <form class="form form-horizontal" [formGroup]="EmployeeForm" (ngSubmit)="EmployeeForm.valid && SaveForm()"
+                    #enjiForm="ngForm">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Username</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" formControlName="username"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('username').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">First Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" formControlName="firstName"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('firstName').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Last Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" formControlName="lastName"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('lastName').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Email</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" formControlName="email"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('email').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Birth Date</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="date" [max]="DtMin | date: 'yyyy-MM-dd'" class="form-control" formControlName="birthDate"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('birthDate').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Basic Salary</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input currencyMask class="form-control" formControlName="basicSalary"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('basicSalary').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Status</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" formControlName="status"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('status').invalid}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Group</label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('group').invalid}" formControlName="group">
+                                <option value="">Select One</option>
+                                <option *ngFor="let itemList of ListGrp" value="{{itemList}}">
+                                    {{itemList}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="required-label">Description</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="date" class="form-control" formControlName="description"  [ngClass]="{ 'is-invalid': enjiForm.submitted && GetFormControl('description').invalid}">
+                        </div>
+                    </div>
+                    <div class="form-actions right" align="right">
+                      <button type="button" class="btn btn-raised btn-warning mr-1" (click)="Cancel()">
+                        <mat-icon fontSet="material-icons-round"
+                        style="font-size: medium; height: 18px; width: 18px;">
+                        cancel</mat-icon>
+                        &nbsp;<span translate>Cancel</span> </button>
+                      <button type="submit" class="btn btn-raised btn-primary">
+                        <mat-icon fontSet="material-icons-round"
+                        style="font-size: medium; height: 18px; width: 18px;">
+                        save</mat-icon>
+                        &nbsp;<span translate>Save</span> </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
